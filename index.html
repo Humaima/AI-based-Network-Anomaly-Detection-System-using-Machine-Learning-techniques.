@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Anomaly Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='computer_3598209.png') }}" type="image/x-icon"> <!-- Network icon from Freepik -->
+</head>
+<body class="loading">
+    <header>
+        <img src="{{ url_for('static', filename='computer_3598209.png') }}" alt="Network Icon" style="width: 50px; vertical-align: middle;">
+        <h1>Network Anomaly Detection</h1>
+        <p class="tagline">Keep your network safe with real-time attack detection!</p>
+    </header>
+    <main>
+        <form id="predictForm" method="post" action="/predict">
+            <label for="proto">Protocol:</label>
+            <input type="text" id="proto" name="proto" required><br><br>
+            <label for="service">Service:</label>
+            <input type="text" id="service" name="service" required><br><br>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required><br><br>
+            <label for="spkts">Source Packets:</label>
+            <input type="number" id="spkts" name="spkts" step="any" required><br><br>
+            <label for="dpkts">Destination Packets:</label>
+            <input type="number" id="dpkts" name="dpkts" step="any" required><br><br>
+            <label for="sbytes">Source Bytes:</label>
+            <input type="number" id="sbytes" name="sbytes" step="any" required><br><br>
+            <label for="dbytes">Destination Bytes:</label>
+            <input type="number" id="dbytes" name="dbytes" step="any" required><br><br>
+            <label for="rate">Rate:</label>
+            <input type="number" id="rate" name="rate" step="any" required><br><br>
+            <button type="submit">Predict</button>
+        </form>
+    </main>
+    
+    <!-- Modal Structure -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalResult"></div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        // Transition effect for the body
+        window.addEventListener('load', () => {
+            document.body.classList.remove('loading');
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

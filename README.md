@@ -1,0 +1,2 @@
+# AI-based-Network-Anomaly-Detection-System-using-Machine-Learning-techniques.
+This project implements an AI-based Network Anomaly Detection System using machine learning techniques to identify and predict potential security threats and anomalies in network traffic. The system is built using the UNSW-NB15 dataset, which includes various network traffic features such as protocols, services, packet sizes, and byte counts. 

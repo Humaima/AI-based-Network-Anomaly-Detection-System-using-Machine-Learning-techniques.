@@ -1,0 +1,139 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #002b36;
+    background: url('https://img.freepik.com/free-vector/gradient-network-connection-background_23-2148874050.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #13586d;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    align-content: center;
+    border: 1px solid #070707;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+/* Close Button */
+.close {
+    color: #082a52;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(7, 42, 75);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header {
+    background-color: rgba(0, 60, 85, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #009688;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif; /* Network-themed font */
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header .tagline {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #b0bec5;
+    margin: 10px 0;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: #004d6b;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    background-color: #005e77; /* Slightly lighter blue on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+form input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #009688;
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    margin: 0 auto; /* Center align button */
+}
+
+form button:hover {
+    background-color: #00796b;
+    transform: scale(1.05);
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
